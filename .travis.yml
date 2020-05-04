@@ -6,19 +6,19 @@ script:
   - workbox generateSW workbox-config.js
 deploy:
   - provider: s3
-    skip_cleanup: true
-    access_key_id: $ACCESS_KEY_ID
-    secret_access_key: $SECRET_ACCESS_KEY
-    bucket: ivantsyba.com-stg
+    cleanup: true
+    access_key_id: "AKIAIRRWLUVKGQW7TD3A"
+    secret_access_key: "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"
+    bucket: "ivantsyba.com-dev"
     region: eu-central-1
     acl: public_read
     on:
       branch: develop
   - provider: s3
-    skip_cleanup: true
-    access_key_id: $ACCESS_KEY_ID
-    secret_access_key: $SECRET_ACCESS_KEY
-    bucket: ivantsyba.com-prod
+    cleanup: true
+    access_key_id: "AKIAIRRWLUVKGQW7TD3A"
+    secret_access_key: "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"
+    bucket: "ivantsyba.com-production"
     region: eu-central-1
     acl: public_read
     on:
